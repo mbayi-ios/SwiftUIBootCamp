@@ -18,6 +18,7 @@
 		89C9DBFF28AB9A7900CED28D /* IconsBootCamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C9DBFE28AB9A7900CED28D /* IconsBootCamp.swift */; };
 		89C9DC0128AB9E3400CED28D /* ImageBootCamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C9DC0028AB9E3400CED28D /* ImageBootCamp.swift */; };
 		89C9DC0328ABA1ED00CED28D /* FrameBootCamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C9DC0228ABA1ED00CED28D /* FrameBootCamp.swift */; };
+		89C9DC0528ABA56800CED28D /* BackgroundAndOverlayBootCamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C9DC0428ABA56800CED28D /* BackgroundAndOverlayBootCamp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		89C9DBFE28AB9A7900CED28D /* IconsBootCamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconsBootCamp.swift; sourceTree = "<group>"; };
 		89C9DC0028AB9E3400CED28D /* ImageBootCamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageBootCamp.swift; sourceTree = "<group>"; };
 		89C9DC0228ABA1ED00CED28D /* FrameBootCamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameBootCamp.swift; sourceTree = "<group>"; };
+		89C9DC0428ABA56800CED28D /* BackgroundAndOverlayBootCamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundAndOverlayBootCamp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				89C9DBF628AB834A00CED28D /* TextBootCamp.swift */,
 				89C9DBFE28AB9A7900CED28D /* IconsBootCamp.swift */,
 				89C9DC0228ABA1ED00CED28D /* FrameBootCamp.swift */,
+				89C9DC0428ABA56800CED28D /* BackgroundAndOverlayBootCamp.swift */,
 				89C9DBF828AB873F00CED28D /* ShapesBootCamp.swift */,
 				89C9DBFA28AB8ADA00CED28D /* ColorsBootCamp.swift */,
 				89C9DBFC28AB968000CED28D /* GradientBootCamp.swift */,
@@ -161,6 +164,7 @@
 				89C9DBFF28AB9A7900CED28D /* IconsBootCamp.swift in Sources */,
 				89C9DBFB28AB8ADA00CED28D /* ColorsBootCamp.swift in Sources */,
 				89C9DBF928AB873F00CED28D /* ShapesBootCamp.swift in Sources */,
+				89C9DC0528ABA56800CED28D /* BackgroundAndOverlayBootCamp.swift in Sources */,
 				8951830D28AB803C00E57744 /* ContentView.swift in Sources */,
 				8951830B28AB803C00E57744 /* SwiftUIBootCampApp.swift in Sources */,
 				89C9DBFD28AB968000CED28D /* GradientBootCamp.swift in Sources */,
