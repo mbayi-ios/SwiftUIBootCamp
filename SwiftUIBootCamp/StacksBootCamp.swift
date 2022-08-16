@@ -12,7 +12,7 @@ struct StacksBootCamp: View {
     // HStack -> Horizontal
     // ZStack -> ZInded(back to front)
     var body: some View {
-        HStack (alignment: .top){
+        ZStack (alignment: .trailing){
             Rectangle()
                 .fill(Color.red)
                 .frame(width: 200, height: 200)
