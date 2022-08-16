@@ -12,36 +12,14 @@ struct StacksBootCamp: View {
     // HStack -> Horizontal
     // ZStack -> ZInded(back to front)
     var body: some View {
-        ZStack(alignment: .top) {
-            Rectangle()
-                .fill(Color.yellow)
-                .frame(width: 350, height: 500)
+        VStack(alignment: .center, spacing: 20) {
+            Text("5")
+                .font(.largeTitle)
+                .underline()
 
-            VStack {
-                Rectangle()
-                    .fill(Color.red)
-                    .frame(width: 150, height: 150)
-
-                Rectangle()
-                    .fill(Color.green)
-                    .frame(width: 100, height: 100)
-
-                HStack {
-                    Rectangle()
-                        .fill(Color.purple)
-                    .frame(width: 50, height: 50)
-
-                    Rectangle()
-                        .fill(Color.pink)
-                        .frame(width: 58, height: 78)
-
-                    Rectangle()
-                        .fill(Color.black)
-                    .frame(width: 50, height: 50)
-                }
-            }
-            .background(Color.black)
-
+            Text("Item in your cart")
+                .font(.caption)
+                .foregroundColor(.black)
         }
     }
 }
