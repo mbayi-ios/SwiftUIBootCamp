@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		890F520828ABAF09004056D5 /* StacksBootCamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890F520728ABAF09004056D5 /* StacksBootCamp.swift */; };
 		8951830B28AB803C00E57744 /* SwiftUIBootCampApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8951830A28AB803C00E57744 /* SwiftUIBootCampApp.swift */; };
 		8951830D28AB803C00E57744 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8951830C28AB803C00E57744 /* ContentView.swift */; };
 		8951830F28AB803F00E57744 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8951830E28AB803F00E57744 /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		890F520728ABAF09004056D5 /* StacksBootCamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StacksBootCamp.swift; sourceTree = "<group>"; };
 		8951830728AB803C00E57744 /* SwiftUIBootCamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIBootCamp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8951830A28AB803C00E57744 /* SwiftUIBootCampApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIBootCampApp.swift; sourceTree = "<group>"; };
 		8951830C28AB803C00E57744 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 				89C9DBFA28AB8ADA00CED28D /* ColorsBootCamp.swift */,
 				89C9DBFC28AB968000CED28D /* GradientBootCamp.swift */,
 				89C9DC0028AB9E3400CED28D /* ImageBootCamp.swift */,
+				890F520728ABAF09004056D5 /* StacksBootCamp.swift */,
 			);
 			path = SwiftUIBootCamp;
 			sourceTree = "<group>";
@@ -169,6 +172,7 @@
 				8951830B28AB803C00E57744 /* SwiftUIBootCampApp.swift in Sources */,
 				89C9DBFD28AB968000CED28D /* GradientBootCamp.swift in Sources */,
 				89C9DC0128AB9E3400CED28D /* ImageBootCamp.swift in Sources */,
+				890F520828ABAF09004056D5 /* StacksBootCamp.swift in Sources */,
 				89C9DBF728AB834A00CED28D /* TextBootCamp.swift in Sources */,
 				89C9DC0328ABA1ED00CED28D /* FrameBootCamp.swift in Sources */,
 			);
