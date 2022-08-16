@@ -9,14 +9,21 @@ import SwiftUI
 
 struct SpacerBootCamp: View {
     var body: some View {
-        HStack {
-            Rectangle()
-                .frame(width: 100, height: 100)
+        VStack {
+            HStack (spacing: 0){
+                Image(systemName: "xmark")
+                Spacer()
+                    .frame(height: 10)
+                    .background(Color.orange)
+                Image(systemName: "gear")
+            }
+            .font(.title)
+            .padding(.horizontal)
+
             Spacer()
-            Rectangle()
-                .frame(width: 100, height: 100)
+                .frame(width: 10)
+                .background(Color.orange)
         }
-        .background(Color.yellow)
     }
 }
 
