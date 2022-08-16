@@ -14,6 +14,7 @@
 		89C9DBF728AB834A00CED28D /* TextBootCamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C9DBF628AB834A00CED28D /* TextBootCamp.swift */; };
 		89C9DBF928AB873F00CED28D /* ShapesBootCamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C9DBF828AB873F00CED28D /* ShapesBootCamp.swift */; };
 		89C9DBFB28AB8ADA00CED28D /* ColorsBootCamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C9DBFA28AB8ADA00CED28D /* ColorsBootCamp.swift */; };
+		89C9DBFD28AB968000CED28D /* GradientBootCamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C9DBFC28AB968000CED28D /* GradientBootCamp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		89C9DBF628AB834A00CED28D /* TextBootCamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBootCamp.swift; sourceTree = "<group>"; };
 		89C9DBF828AB873F00CED28D /* ShapesBootCamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapesBootCamp.swift; sourceTree = "<group>"; };
 		89C9DBFA28AB8ADA00CED28D /* ColorsBootCamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsBootCamp.swift; sourceTree = "<group>"; };
+		89C9DBFC28AB968000CED28D /* GradientBootCamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientBootCamp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				89C9DBF628AB834A00CED28D /* TextBootCamp.swift */,
 				89C9DBF828AB873F00CED28D /* ShapesBootCamp.swift */,
 				89C9DBFA28AB8ADA00CED28D /* ColorsBootCamp.swift */,
+				89C9DBFC28AB968000CED28D /* GradientBootCamp.swift */,
 			);
 			path = SwiftUIBootCamp;
 			sourceTree = "<group>";
@@ -150,6 +153,7 @@
 				89C9DBF928AB873F00CED28D /* ShapesBootCamp.swift in Sources */,
 				8951830D28AB803C00E57744 /* ContentView.swift in Sources */,
 				8951830B28AB803C00E57744 /* SwiftUIBootCampApp.swift in Sources */,
+				89C9DBFD28AB968000CED28D /* GradientBootCamp.swift in Sources */,
 				89C9DBF728AB834A00CED28D /* TextBootCamp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
