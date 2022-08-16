@@ -15,6 +15,7 @@
 		89C9DBF928AB873F00CED28D /* ShapesBootCamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C9DBF828AB873F00CED28D /* ShapesBootCamp.swift */; };
 		89C9DBFB28AB8ADA00CED28D /* ColorsBootCamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C9DBFA28AB8ADA00CED28D /* ColorsBootCamp.swift */; };
 		89C9DBFD28AB968000CED28D /* GradientBootCamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C9DBFC28AB968000CED28D /* GradientBootCamp.swift */; };
+		89C9DBFF28AB9A7900CED28D /* IconsBootCamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C9DBFE28AB9A7900CED28D /* IconsBootCamp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		89C9DBF828AB873F00CED28D /* ShapesBootCamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapesBootCamp.swift; sourceTree = "<group>"; };
 		89C9DBFA28AB8ADA00CED28D /* ColorsBootCamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsBootCamp.swift; sourceTree = "<group>"; };
 		89C9DBFC28AB968000CED28D /* GradientBootCamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientBootCamp.swift; sourceTree = "<group>"; };
+		89C9DBFE28AB9A7900CED28D /* IconsBootCamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconsBootCamp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +45,7 @@
 		895182FE28AB803C00E57744 = {
 			isa = PBXGroup;
 			children = (
+				89C9DBFE28AB9A7900CED28D /* IconsBootCamp.swift */,
 				8951830928AB803C00E57744 /* SwiftUIBootCamp */,
 				8951830828AB803C00E57744 /* Products */,
 			);
@@ -149,6 +152,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89C9DBFF28AB9A7900CED28D /* IconsBootCamp.swift in Sources */,
 				89C9DBFB28AB8ADA00CED28D /* ColorsBootCamp.swift in Sources */,
 				89C9DBF928AB873F00CED28D /* ShapesBootCamp.swift in Sources */,
 				8951830D28AB803C00E57744 /* ContentView.swift in Sources */,
