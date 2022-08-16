@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		890F520828ABAF09004056D5 /* StacksBootCamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890F520728ABAF09004056D5 /* StacksBootCamp.swift */; };
+		890F520A28ABCC66004056D5 /* PaddingAndSpacerBootCamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890F520928ABCC66004056D5 /* PaddingAndSpacerBootCamp.swift */; };
 		8951830B28AB803C00E57744 /* SwiftUIBootCampApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8951830A28AB803C00E57744 /* SwiftUIBootCampApp.swift */; };
 		8951830D28AB803C00E57744 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8951830C28AB803C00E57744 /* ContentView.swift */; };
 		8951830F28AB803F00E57744 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8951830E28AB803F00E57744 /* Assets.xcassets */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		890F520728ABAF09004056D5 /* StacksBootCamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StacksBootCamp.swift; sourceTree = "<group>"; };
+		890F520928ABCC66004056D5 /* PaddingAndSpacerBootCamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingAndSpacerBootCamp.swift; sourceTree = "<group>"; };
 		8951830728AB803C00E57744 /* SwiftUIBootCamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIBootCamp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8951830A28AB803C00E57744 /* SwiftUIBootCampApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIBootCampApp.swift; sourceTree = "<group>"; };
 		8951830C28AB803C00E57744 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				89C9DBFA28AB8ADA00CED28D /* ColorsBootCamp.swift */,
 				89C9DBFC28AB968000CED28D /* GradientBootCamp.swift */,
 				89C9DC0028AB9E3400CED28D /* ImageBootCamp.swift */,
+				890F520928ABCC66004056D5 /* PaddingAndSpacerBootCamp.swift */,
 				890F520728ABAF09004056D5 /* StacksBootCamp.swift */,
 			);
 			path = SwiftUIBootCamp;
@@ -166,6 +169,7 @@
 			files = (
 				89C9DBFF28AB9A7900CED28D /* IconsBootCamp.swift in Sources */,
 				89C9DBFB28AB8ADA00CED28D /* ColorsBootCamp.swift in Sources */,
+				890F520A28ABCC66004056D5 /* PaddingAndSpacerBootCamp.swift in Sources */,
 				89C9DBF928AB873F00CED28D /* ShapesBootCamp.swift in Sources */,
 				89C9DC0528ABA56800CED28D /* BackgroundAndOverlayBootCamp.swift in Sources */,
 				8951830D28AB803C00E57744 /* ContentView.swift in Sources */,
