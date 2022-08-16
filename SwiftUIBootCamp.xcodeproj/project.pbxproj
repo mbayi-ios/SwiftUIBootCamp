@@ -13,6 +13,7 @@
 		8951831228AB803F00E57744 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8951831128AB803F00E57744 /* Preview Assets.xcassets */; };
 		89C9DBF728AB834A00CED28D /* TextBootCamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C9DBF628AB834A00CED28D /* TextBootCamp.swift */; };
 		89C9DBF928AB873F00CED28D /* ShapesBootCamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C9DBF828AB873F00CED28D /* ShapesBootCamp.swift */; };
+		89C9DBFB28AB8ADA00CED28D /* ColorsBootCamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C9DBFA28AB8ADA00CED28D /* ColorsBootCamp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		8951831128AB803F00E57744 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		89C9DBF628AB834A00CED28D /* TextBootCamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBootCamp.swift; sourceTree = "<group>"; };
 		89C9DBF828AB873F00CED28D /* ShapesBootCamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapesBootCamp.swift; sourceTree = "<group>"; };
+		89C9DBFA28AB8ADA00CED28D /* ColorsBootCamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsBootCamp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				8951831028AB803F00E57744 /* Preview Content */,
 				89C9DBF628AB834A00CED28D /* TextBootCamp.swift */,
 				89C9DBF828AB873F00CED28D /* ShapesBootCamp.swift */,
+				89C9DBFA28AB8ADA00CED28D /* ColorsBootCamp.swift */,
 			);
 			path = SwiftUIBootCamp;
 			sourceTree = "<group>";
@@ -143,6 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89C9DBFB28AB8ADA00CED28D /* ColorsBootCamp.swift in Sources */,
 				89C9DBF928AB873F00CED28D /* ShapesBootCamp.swift in Sources */,
 				8951830D28AB803C00E57744 /* ContentView.swift in Sources */,
 				8951830B28AB803C00E57744 /* SwiftUIBootCampApp.swift in Sources */,
