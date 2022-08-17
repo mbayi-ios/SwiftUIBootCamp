@@ -9,19 +9,18 @@ import SwiftUI
 
 struct ScrollViewBootCamp: View {
     var body: some View {
-        ScrollView{
-            VStack {
+        ScrollView(.vertical, showsIndicators: false, content: {
+              VStack {
                 ForEach(0..<50) { index in
                     Rectangle()
-                        .fill(Color.orange)
+                        .fill(Color.red)
                         .frame( height: 300)
 
                 }
 
 
             }
-        }
-
+        })
     }
 }
 
