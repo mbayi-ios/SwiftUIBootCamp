@@ -11,7 +11,11 @@ struct ForEachBootCamp: View {
     var body: some View {
         VStack{
             ForEach(1..<10) { index in
-                Text("hello: \(index)")
+                HStack {
+                    Circle()
+                        .frame(width: 30, height: 30)
+                    Text("index is: \(index)")
+                }
             }
         }
     }
