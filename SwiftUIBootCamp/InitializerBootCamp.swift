@@ -11,6 +11,7 @@ struct InitializerBootCamp: View {
 
     let backgroundColor: Color
     let count: Int
+    let title: String = "oranges"
 
     var body: some View {
         VStack(spacing: 15) {
@@ -19,7 +20,7 @@ struct InitializerBootCamp: View {
                 .foregroundColor(.white)
                 .underline()
 
-            Text("Apple")
+            Text("\(title)")
                 .font(.headline)
                 .foregroundColor(.white)
         }
