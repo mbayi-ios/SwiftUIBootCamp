@@ -12,16 +12,16 @@ struct ExtractSubViewsBootCamp: View {
         ZStack {
             Color.blue
                 .ignoresSafeArea(.all)
-            
+
             HStack {
-                
+
                 MyItem(title: "Mango", count: 2, color: .red)
-                
+
                 MyItem(title: "Mango", count: 2, color: .purple)
-                
+
                 MyItem(title: "Mango", count: 12, color: .yellow)
             }
-            
+
         }
     }
     
@@ -37,7 +37,7 @@ struct MyItem: View {
     let title: String
     let count: Int
     let color: Color
-    
+
     var body: some View {
         VStack {
             Text("\(count)")
