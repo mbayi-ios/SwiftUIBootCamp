@@ -11,7 +11,13 @@ struct InitializerBootCamp: View {
 
     let backgroundColor: Color
     let count: Int
-    let title: String = "oranges"
+    let title: String
+
+    init(backgroundColor: Color, count: Int, title: String) {
+        self.backgroundColor = backgroundColor
+        self.count = count
+        self.title = title
+    }
 
     var body: some View {
         VStack(spacing: 15) {
@@ -32,6 +38,6 @@ struct InitializerBootCamp: View {
 
 struct InitializerBootCamp_Previews: PreviewProvider {
     static var previews: some View {
-        InitializerBootCamp(backgroundColor: Color.red, count: 25)
+        InitializerBootCamp(backgroundColor: Color.red, count: 25, title: "mangos")
     }
 }
