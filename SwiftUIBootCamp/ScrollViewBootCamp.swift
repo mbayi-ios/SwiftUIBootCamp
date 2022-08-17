@@ -11,14 +11,14 @@ struct ScrollViewBootCamp: View {
     var body: some View {
         ScrollView{
             VStack {
-                Rectangle()
-                    .frame( height: 300)
-                Rectangle()
-                    .frame( height: 300)
-                Rectangle()
-                    .frame( height: 300)
-                Rectangle()
-                    .frame( height: 300)
+                ForEach(0..<50) { index in
+                    Rectangle()
+                        .fill(Color.orange)
+                        .frame( height: 300)
+
+                }
+
+
             }
         }
 
