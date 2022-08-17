@@ -19,12 +19,42 @@ struct GridBootCamp: View {
             Rectangle()
                 .fill(Color.white)
                 .frame(height: 400)
-            LazyVGrid(columns: columns) {
-                ForEach(0..<50) { index in
-                    Rectangle()
-                        .frame( height: 150)
-                }
-            }
+
+
+            LazyVGrid(
+                columns: columns,
+                alignment: .center,
+                spacing: 6,
+                pinnedViews: [.sectionHeaders],
+                content: {
+                    Section(header:
+                                Text("Section One")
+                                .foregroundColor(.white)
+                                .font(.title)
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .background(.orange)
+                    ) {
+                        ForEach(0..<10) { index in
+                            Rectangle()
+                                .frame( height: 150)
+                        }
+                    }
+
+                    Section(header:
+                                Text("Section 2")
+                                .foregroundColor(.white)
+                                .font(.title)
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .background(.orange)
+                    ) {
+                        ForEach(0..<10) { index in
+                            Rectangle()
+                                .frame( height: 150)
+                        }
+                    }
+
+                })
+
         }
 
     }
