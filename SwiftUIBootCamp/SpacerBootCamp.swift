@@ -10,7 +10,7 @@ import SwiftUI
 struct SpacerBootCamp: View {
     var body: some View {
         VStack {
-            HStack (spacing: 0){
+            HStack (spacing: 0 ){
                 Image(systemName: "xmark")
                 Spacer()
                     .frame(height: 10)
