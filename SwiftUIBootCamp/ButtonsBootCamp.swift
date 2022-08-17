@@ -17,6 +17,13 @@ struct ButtonsBootCamp: View {
             Button("Click me!") {
                 self.title = "button was pressed"
             }
+
+            Button(action: {
+                self.title = "button Two was pressed"
+            }, label: {
+                Text("Button 2")
+            })
+
         }
     }
 }
