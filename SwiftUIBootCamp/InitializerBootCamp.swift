@@ -50,6 +50,10 @@ struct InitializerBootCamp: View {
 
 struct InitializerBootCamp_Previews: PreviewProvider {
     static var previews: some View {
-        InitializerBootCamp(count: 100, fruit: .orange)
+        HStack {
+            InitializerBootCamp(count: 100, fruit: .orange)
+            InitializerBootCamp(count: 200, fruit: .apple)
+        }
+
     }
 }
