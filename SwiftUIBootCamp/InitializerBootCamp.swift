@@ -18,9 +18,9 @@ struct InitializerBootCamp: View {
         self.title = title
 
         if title == "Apple" {
-            backgroundColor = Color.red
+            self.backgroundColor = Color.red
         } else {
-            backgroundColor = Color.orange
+            self.backgroundColor = Color.orange
         }
     }
 
