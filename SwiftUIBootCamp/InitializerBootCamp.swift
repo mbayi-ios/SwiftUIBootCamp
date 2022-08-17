@@ -13,15 +13,22 @@ struct InitializerBootCamp: View {
     let count: Int
     let title: String
 
-    init(count: Int, title: String) {
+    init(count: Int, fruit: Fruit) {
         self.count = count
-        self.title = title
 
-        if title == "Apple" {
-            self.backgroundColor = Color.red
+        if fruit == .orange {
+            self.title = "Apples"
+            self.backgroundColor = .red
+
         } else {
-            self.backgroundColor = Color.orange
+            self.title = "Oranges"
+            self.backgroundColor = .orange
         }
+    }
+
+    enum Fruit {
+        case apple
+        case orange
     }
 
     var body: some View {
@@ -43,6 +50,6 @@ struct InitializerBootCamp: View {
 
 struct InitializerBootCamp_Previews: PreviewProvider {
     static var previews: some View {
-        InitializerBootCamp(count: 5, title: "Apple")
+        InitializerBootCamp(count: 100, fruit: .orange)
     }
 }
