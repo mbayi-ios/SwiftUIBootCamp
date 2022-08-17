@@ -15,27 +15,33 @@ struct ExtractedFunctionsBootCamp: View {
             backgroundColor
                 .edgesIgnoringSafeArea(.all)
 
-            VStack {
-                Text("Title")
-                    .font(.largeTitle)
+            contentLayer
 
-                Button(action: {
-                    buttonPressed()
-                }, label: {
-                    Text("PRESS ME")
-                        .font(.headline)
-                        .foregroundColor(.white)
-                        .padding()
-                        .background(Color.black)
-                        .cornerRadius(10)
-                })
-            }
+        }
+    }
+
+    var contentLayer: some View {
+        VStack {
+            Text("Title")
+                .font(.largeTitle)
+
+            Button(action: {
+                buttonPressed()
+            }, label: {
+                Text("PRESS ME")
+                    .font(.headline)
+                    .foregroundColor(.white)
+                    .padding()
+                    .background(Color.black)
+                    .cornerRadius(10)
+            })
         }
     }
 
     func buttonPressed() {
         backgroundColor = .yellow
     }
+
 }
 
 struct ExtractedFunctionsBootCamp_Previews: PreviewProvider {
