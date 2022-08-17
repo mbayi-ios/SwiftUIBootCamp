@@ -13,10 +13,15 @@ struct InitializerBootCamp: View {
     let count: Int
     let title: String
 
-    init(backgroundColor: Color, count: Int, title: String) {
-        self.backgroundColor = backgroundColor
+    init(count: Int, title: String) {
         self.count = count
         self.title = title
+
+        if title == "Apple" {
+            backgroundColor = Color.red
+        } else {
+            backgroundColor = Color.orange
+        }
     }
 
     var body: some View {
@@ -38,6 +43,6 @@ struct InitializerBootCamp: View {
 
 struct InitializerBootCamp_Previews: PreviewProvider {
     static var previews: some View {
-        InitializerBootCamp(backgroundColor: Color.red, count: 25, title: "mangos")
+        InitializerBootCamp(count: 5, title: "Apple")
     }
 }
