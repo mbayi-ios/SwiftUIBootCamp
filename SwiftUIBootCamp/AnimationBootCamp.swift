@@ -25,6 +25,7 @@ struct AnimationBootCamp: View {
                 .frame(
                     width: isAnimated ? 100 : 300,
                     height: isAnimated ? 120: 300)
+                .offset(y: isAnimated ? 300 : -100)
 
             Spacer()
         }
