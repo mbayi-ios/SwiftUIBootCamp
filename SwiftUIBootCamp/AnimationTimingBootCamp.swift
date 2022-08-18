@@ -16,7 +16,16 @@ struct AnimationTimingBootCamp: View {
             }
             RoundedRectangle(cornerRadius: 20)
                 .frame(width: isAnimating ? 350 : 50, height: 100)
+                .animation(Animation.linear)
+            RoundedRectangle(cornerRadius: 20)
+                .frame(width: isAnimating ? 350 : 50, height: 100)
+                .animation(Animation.easeIn)
+            RoundedRectangle(cornerRadius: 20)
+                .frame(width: isAnimating ? 350 : 50, height: 100)
                 .animation(Animation.easeOut)
+            RoundedRectangle(cornerRadius: 20)
+                .frame(width: isAnimating ? 350 : 50, height: 100)
+                .animation(Animation.easeInOut)
         }
     }
 }
