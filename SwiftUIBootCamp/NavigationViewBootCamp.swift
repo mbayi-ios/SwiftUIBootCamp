@@ -24,6 +24,7 @@ struct NavigationViewBootCamp: View {
             //.navigationBarTitleDisplayMode(.large)
             //.navigationBarTitleDisplayMode(.automatic)
             //.navigationBarHidden(true)
+            .navigationBarItems(leading: Image(systemName: "person.fill"), trailing: Image(systemName: "gear"))
 
         }
     }
