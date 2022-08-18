@@ -25,9 +25,12 @@ struct SheetsBootCamp: View {
                     .background(Color.white.cornerRadius(10))
             })
         }
-        .sheet(isPresented: $showSheet, content: {
+        .fullScreenCover(isPresented: $showSheet, content: {
             SecondScreen()
         })
+        /*.sheet(isPresented: $showSheet, content: {
+            SecondScreen()
+        }) */
     }
 }
 
@@ -55,7 +58,7 @@ struct SecondScreen: View {
 
 struct SheetsBootCamp_Previews: PreviewProvider {
     static var previews: some View {
-        SheetsBootCamp()
+         SheetsBootCamp()
         //SecondScreen()
     }
 }
