@@ -11,15 +11,19 @@ struct NavigationViewBootCamp: View {
     var body: some View {
         NavigationView {
             ScrollView {
-                Text("Hello world")
-                Text("Hello world")
-                Text("Hello world")
+
+                NavigationLink("Hello, world",
+                               destination: Text("second Screen"))
+                
+                Text("Hello world1")
+                Text("Hello world2")
+                Text("Hello world3")
             }
             .navigationTitle("All Inboxes")
             //.navigationBarTitleDisplayMode(.inline)
             //.navigationBarTitleDisplayMode(.large)
             //.navigationBarTitleDisplayMode(.automatic)
-            .navigationBarHidden(true)
+            //.navigationBarHidden(true)
 
         }
     }
