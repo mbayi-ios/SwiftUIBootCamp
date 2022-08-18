@@ -18,7 +18,8 @@ struct NavigationViewBootCamp: View {
             .navigationTitle("All Inboxes")
             //.navigationBarTitleDisplayMode(.inline)
             //.navigationBarTitleDisplayMode(.large)
-            .navigationBarTitleDisplayMode(.automatic)
+            //.navigationBarTitleDisplayMode(.automatic)
+            .navigationBarHidden(true)
 
         }
     }
