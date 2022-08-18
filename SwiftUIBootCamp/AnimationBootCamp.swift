@@ -20,9 +20,11 @@ struct AnimationBootCamp: View {
 
             }
             Spacer()
-            RoundedRectangle(cornerRadius: 25)
+            RoundedRectangle(cornerRadius: isAnimated ? 25 : 100)
                 .fill(isAnimated ? Color.red : Color.green)
-                .frame(width: 300, height: 300)
+                .frame(
+                    width: isAnimated ? 100 : 300,
+                    height: isAnimated ? 120: 300)
 
             Spacer()
         }
