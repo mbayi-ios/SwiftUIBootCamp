@@ -13,8 +13,8 @@ struct NavigationViewBootCamp: View {
             ScrollView {
 
                 NavigationLink("Hello, world",
-                               destination: Text("second Screen"))
-                
+                               destination: MyOtherScreen())
+
                 Text("Hello world1")
                 Text("Hello world2")
                 Text("Hello world3")
@@ -24,6 +24,19 @@ struct NavigationViewBootCamp: View {
             //.navigationBarTitleDisplayMode(.large)
             //.navigationBarTitleDisplayMode(.automatic)
             //.navigationBarHidden(true)
+
+        }
+    }
+}
+
+struct MyOtherScreen: View {
+    var body: some View {
+        ZStack {
+            Color.green
+                .edgesIgnoringSafeArea(.all)
+                .navigationTitle("Green Screen!")
+
+            NavigationLink("Click here", destination: Text("third screen"))
 
         }
     }
