@@ -14,9 +14,8 @@ struct AnimationBootCamp: View {
     var body: some View {
         VStack {
             Button("Button") {
-                withAnimation(.default) {
                     isAnimated.toggle()
-                }
+
 
             }
             Spacer()
@@ -27,6 +26,7 @@ struct AnimationBootCamp: View {
                     height: isAnimated ? 120: 300)
                 .rotationEffect(Angle(degrees: isAnimated ? 360 : 0))
                 .offset(y: isAnimated ? 300 : -100)
+                .animation(Animation.default.repeatForever(autoreverses: true))
 
             Spacer()
         }
