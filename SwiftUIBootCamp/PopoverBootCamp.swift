@@ -27,15 +27,21 @@ struct PopoverBootCamp: View {
 //            }
 
             //METHOD 2 - TRANSITION
-            ZStack {
-                if showNewScreen {
-                    NewScreen(showNewScreen: $showNewScreen)
-                        .transition(.move(edge: .bottom))
-                        .animation(.spring())
+//            ZStack {
+//                if showNewScreen {
+//                    NewScreen(showNewScreen: $showNewScreen)
+//                        .transition(.move(edge: .bottom))
+//                        .animation(.spring())
+//
+//                }
+//            }
+//            .zIndex(2.0)
 
-                }
-            }
-            .zIndex(2.0)
+            //METHOD 3 - ANIMAITON OFFSET
+            NewScreen(showNewScreen: $showNewScreen)
+                .padding(.top, 100)
+                .offset(y: showNewScreen ? 0 : UIScreen.main.bounds.height)
+                .animation(.spring())
 
         }
     }
