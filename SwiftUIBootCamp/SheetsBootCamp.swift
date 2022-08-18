@@ -26,8 +26,28 @@ struct SheetsBootCamp: View {
             })
         }
         .sheet(isPresented: $showSheet, content: {
-            Text("hello there")
+            SecondScreen()
         })
+    }
+}
+
+struct SecondScreen: View {
+
+    var body: some View {
+        ZStack {
+            Color.red
+                .edgesIgnoringSafeArea(.all)
+
+            Button(action: {
+
+            }, label: {
+                Text("Button")
+                    .foregroundColor(.red)
+                    .font(.headline)
+                    .padding(20)
+                    .background(Color.white.cornerRadius(10))
+            })
+        }
     }
 }
 
