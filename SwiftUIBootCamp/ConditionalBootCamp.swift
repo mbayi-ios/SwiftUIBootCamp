@@ -17,8 +17,11 @@ struct ConditionalBootCamp: View {
                 showCircle.toggle()
             }
 
-            if showCircle == true {
+            if showCircle {
                 Circle()
+                    .frame(width: 100, height: 100)
+            } else {
+                Rectangle()
                     .frame(width: 100, height: 100)
             }
 
