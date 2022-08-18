@@ -22,15 +22,28 @@ struct PopoverBootCamp: View {
                 Spacer()
             }
             //METHOD 1 - SHEET
-            .sheet(isPresented: $showNewScreen) {
-                NewScreen()
+//            .sheet(isPresented: $showNewScreen) {
+//                NewScreen()
+//            }
+
+            //METHOD 2 - TRANSITION
+            ZStack {
+                if showNewScreen {
+                    NewScreen(showNewScreen: $showNewScreen)
+                        .transition(.move(edge: .bottom))
+                        .animation(.spring())
+
+                }
             }
+            .zIndex(2.0)
+
         }
     }
 }
 
 struct NewScreen: View {
-    @Environment(\.presentationMode) var presentationMode
+    //@Environment(\.presentationMode) var presentationMode
+    @Binding var showNewScreen: Bool
 
     var body: some View {
         ZStack(alignment: .topLeading) {
@@ -38,7 +51,8 @@ struct NewScreen: View {
                 .edgesIgnoringSafeArea(.all)
 
             Button {
-                presentationMode.wrappedValue.dismiss()
+                //presentationMode.wrappedValue.dismiss()
+                showNewScreen.toggle()
             } label: {
                 Image(systemName: "xmark")
                     .font(.largeTitle)
