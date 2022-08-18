@@ -17,7 +17,9 @@ struct TernaryBootCamp: View {
             }
             RoundedRectangle(cornerRadius: 20)
                 .fill(isStartingState ? Color.red : Color.blue)
-                .frame(width: 200, height: 100)
+                .frame(
+                    width: isStartingState ? 200 : 50,
+                    height: isStartingState ? 100 : 100)
         }
     }
 }
