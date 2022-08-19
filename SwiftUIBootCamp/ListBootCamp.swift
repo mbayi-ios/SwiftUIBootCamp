@@ -30,9 +30,11 @@ struct ListBootCamp: View {
                         ForEach(fruits, id: \.self) { fruit in
                             Text(fruit.capitalized)
                                 .font(.callout)
+                                .foregroundColor(.white)
                         }
                         .onDelete(perform: delete)
                         .onMove(perform: move)
+                        .listRowBackground(Color.pink)
                     }
 
                 Section(header: Text("Veggies")) {
