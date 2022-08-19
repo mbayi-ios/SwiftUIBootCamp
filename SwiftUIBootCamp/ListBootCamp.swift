@@ -12,15 +12,22 @@ struct ListBootCamp: View {
         "apple", "orange", "banana", "pech", "mango"
     ]
     var body: some View {
-        List {
-            Section(
-                header: Text("Fruits")){
-                    ForEach(fruits, id: \.self) { fruit in
-                        Text(fruit.capitalized)
+        NavigationView {
+            List {
+                Section(
+                    header: Text("Fruits")){
+                        ForEach(fruits, id: \.self) { fruit in
+                            Text(fruit.capitalized)
+                        }
+                        .onDelete(perform: delete)
+                        .onMove(perform: {indices, newOffset in
+                            fruits.move(fromOffsets:  , toOffset: <#T##Int#>)
+                        })
                     }
-                    .onDelete(perform: delete)
-                }
 
+            }
+            .navigationTitle("Grovery List")
+            .navigationBarItems(leading: EditButton())
         }
     }
 
