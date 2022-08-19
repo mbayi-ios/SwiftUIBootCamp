@@ -19,11 +19,15 @@ struct ListBootCamp: View {
                         Text(fruit.capitalized)
                     }
                     .onDelete(perform: { indexSet in
-                        fruits.remove(atOffsets: indexSet)
+                        delete(indexSet: indexSet)
                     })
                 }
 
         }
+    }
+
+    func delete(indexSet: IndexSet) {
+        fruits.remove(atOffsets: indexSet)
     }
 }
 
