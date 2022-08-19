@@ -9,6 +9,8 @@ import SwiftUI
 
 struct TextFieldBootCamp: View {
     @State var textFieldText: String = ""
+    @State var dataArray: [String] = []
+
     var body: some View {
         NavigationView {
             VStack {
@@ -20,7 +22,7 @@ struct TextFieldBootCamp: View {
                 .font(.headline)
 
                 Button(action: {
-
+                    saveText()
                 }, label: {
                     Text("Save".uppercased())
                         .padding()
@@ -30,11 +32,20 @@ struct TextFieldBootCamp: View {
 
                         .font(.headline)
                 })
+
+                ForEach(dataArray, id: \.self) { data in
+                    Text(data)
+                }
                 Spacer()
             }
             .padding()
             .navigationTitle("Textfield Bootcamp")
         }
+    }
+
+    func saveText() {
+        dataArray.append(textFieldText)
+        textFieldText = ""
     }
 }
 
