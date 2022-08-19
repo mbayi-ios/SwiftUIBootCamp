@@ -9,17 +9,24 @@ import SwiftUI
 
 struct AlertBootCam: View {
     @State var showAlert: Bool = false
+    @State var backgroundColor: Color = Color.yellow
+
     var body: some View {
-        Button("Click Here") {
-            showAlert.toggle()
+        ZStack {
+            backgroundColor.edgesIgnoringSafeArea(.all)
+            Button("Click Here") {
+                showAlert.toggle()
+            }
+            .alert(isPresented: $showAlert) {
+                //Alert(title: Text("there was an error!"))
+                Alert(
+                    title: Text("This is the title"),
+                    message: Text("here we will describe the error"),
+                    primaryButton: .cancel(),
+                    secondaryButton: .destructive(Text("delete"), action: {
+                        backgroundColor = .red
+                    }))
         }
-        .alert(isPresented: $showAlert) {
-            //Alert(title: Text("there was an error!"))
-            Alert(
-                title: Text("This is the title"),
-                message: Text("here we will describe the error"),
-                primaryButton: .cancel(),
-                secondaryButton: .destructive(Text("delete")))
         }
     }
 }
