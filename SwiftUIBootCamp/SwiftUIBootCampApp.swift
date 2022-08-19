@@ -13,7 +13,8 @@ struct SwiftUIBootCampApp: App {
         WindowGroup {
             //ContentView()
             //TextFieldBootCamp()
-            TextEditorBootCamp()
+            //TextEditorBootCamp()
+            PickerBootCamp()
         }
     }
 }
