@@ -14,7 +14,12 @@ struct AlertBootCam: View {
             showAlert.toggle()
         }
         .alert(isPresented: $showAlert) {
-            Alert(title: Text("there was an error!"))
+            //Alert(title: Text("there was an error!"))
+            Alert(
+                title: Text("This is the title"),
+                message: Text("here we will describe the error"),
+                primaryButton: .cancel(),
+                secondaryButton: .destructive(Text("delete")))
         }
     }
 }
