@@ -20,15 +20,17 @@ struct ListBootCamp: View {
                             Text(fruit.capitalized)
                         }
                         .onDelete(perform: delete)
-                        .onMove(perform: {indices, newOffset in
-                            fruits.move(fromOffsets: indices , toOffset: newOffset)
-                        })
+                        .onMove(perform: move)
                     }
 
             }
             .navigationTitle("Grovery List")
             .navigationBarItems(leading: EditButton())
         }
+    }
+
+    func move(indices: IndexSet, newOffset: Int) {
+        fruits.move(fromOffsets: indices , toOffset: newOffset)
     }
 
     func delete(indexSet: IndexSet) {
