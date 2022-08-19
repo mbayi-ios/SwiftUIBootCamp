@@ -10,7 +10,7 @@ import SwiftUI
 struct TabViewBootCamp: View {
     var body: some View {
         TabView {
-            Text("HOME TAB")
+            HomeView()
                 .tabItem {
                     Image(systemName: "house.fill")
                     Text("Home")
@@ -28,8 +28,22 @@ struct TabViewBootCamp: View {
                     Text("Profile")
                 }
         }
+        .accentColor(.black)
     }
 }
+
+struct HomeView: View {
+    var body: some View {
+        ZStack {
+            Color.purple.ignoresSafeArea()
+            Text("HOME TAB")
+                .font(.largeTitle)
+                .foregroundColor(.white)
+        }
+
+    }
+}
+
 
 struct TabViewBootCamp_Previews: PreviewProvider {
     static var previews: some View {
