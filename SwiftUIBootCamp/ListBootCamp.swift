@@ -25,12 +25,18 @@ struct ListBootCamp: View {
 
             }
             .navigationTitle("Grovery List")
-            .navigationBarItems(
-                leading: EditButton(),
-                trailing: Button("Add", action: {
-                    fruits.append("coconut")
-                }))
+            .navigationBarItems(leading: EditButton(), trailing: addButton)
         }
+    }
+
+    var addButton: some View {
+        Button("Add", action:{
+            add()
+        })
+    }
+
+    func add() {
+        fruits.append( "coconut")
     }
 
     func move(indices: IndexSet, newOffset: Int) {
