@@ -26,6 +26,7 @@ struct PickerBootCamp: View {
                             .tag("\(number)")
                     }
             })
+                .pickerStyle(WheelPickerStyle())
                 .background(Color.gray.opacity(0.3))
         }
     }
