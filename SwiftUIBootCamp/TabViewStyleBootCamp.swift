@@ -8,15 +8,21 @@
 import SwiftUI
 
 struct TabViewStyleBootCamp: View {
+
+    let icons: [String] = [
+        "heart.fill", "globe", "housr.fill", "person.fill"
+    ]
     var body: some View {
         TabView {
-            RoundedRectangle(cornerRadius: 25)
-                .foregroundColor(.red)
-            RoundedRectangle(cornerRadius: 25)
-                .foregroundColor(.yellow)
-            RoundedRectangle(cornerRadius: 25)
-                .foregroundColor(.purple)
+            ForEach(icons, id: \.self) { icon in
+                Image(systemName: icon)
+                    .resizable()
+                    .scaledToFit()
+                    .padding(30)
+            }
         }
+        .background(Color.red)
+        .frame(height: 400)
         .tabViewStyle(PageTabViewStyle())
     }
 }
