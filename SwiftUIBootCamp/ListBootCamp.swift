@@ -21,7 +21,7 @@ struct ListBootCamp: View {
                         }
                         .onDelete(perform: delete)
                         .onMove(perform: {indices, newOffset in
-                            fruits.move(fromOffsets:  , toOffset: <#T##Int#>)
+                            fruits.move(fromOffsets: indices , toOffset: newOffset)
                         })
                     }
 
