@@ -11,22 +11,28 @@ struct AlertBootCam: View {
     @State var showAlert: Bool = false
     @State var backgroundColor: Color = Color.yellow
 
-    @State var alertTitle: String = ""
-    @State var alertMessage: String = ""
+    @State var alertType: MyAlerts?  = nil
+
+    enum MyAlerts {
+        case suucess
+        case error
+    }
 
     var body: some View {
         ZStack {
             backgroundColor.edgesIgnoringSafeArea(.all)
             VStack(spacing: 50) {
                 Button("Button 1") {
-                    alertTitle = "error uploading video"
-                    alertMessage = "the vidoe could not be uploadded"
+                    alertType = .error
+                    //alertTitle = "error uploading video"
+                    //alertMessage = "the vidoe could not be uploadded"
                     showAlert.toggle()
                 }
 
                 Button("Button 2") {
-                    alertTitle = "successfully uploaded video!😄"
-                    alertMessage = "Your video is now public"
+                    alertType = .suucess
+                    //alertTitle = "successfully uploaded video!😄"
+                    //alertMessage = "Your video is now public"
                     showAlert.toggle()
                 }
 
@@ -41,9 +47,20 @@ struct AlertBootCam: View {
     }
 
     func getAlert() -> Alert {
-        return Alert(title: Text(alertTitle),
-        message: Text(alertMessage),
-                     dismissButton: .default(Text("ok")))
+        switch alertType {
+        case .error:
+            return Alert(title: Text("There was an error!"))
+        case .suucess:
+            return Alert(title: Text("This was a success"), message: nil, dismissButton: .default(Text("OK"), action: {
+                backgroundColor = .green
+            }))
+
+        default:
+            return Alert(title: Text("ERROR"))
+        }
+//        return Alert(title: Text(alertTitle),
+//        message: Text(alertMessage),
+//                     dismissButton: .default(Text("ok")))
 //        return  Alert(
 //            title: Text("This is the title"),
 //            message: Text("here we will describe the error"),
