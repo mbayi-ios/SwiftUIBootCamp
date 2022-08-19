@@ -11,6 +11,12 @@ struct DatePickerBootCamp: View {
     @State var selectedDate: Date = Date()
     var body: some View {
         DatePicker("select a Date", selection: $selectedDate)
+            .accentColor(Color.red)
+            .datePickerStyle(
+                //CompactDatePickerStyle()
+                //GraphicalDatePickerStyle()
+                WheelDatePickerStyle()
+            )
     }
 }
 
