@@ -13,9 +13,12 @@ struct ActionSheetBootCamp: View {
         Button("click me") {
             showActionSheet.toggle()
         }
-        .actionSheet(isPresented: $showActionSheet, content: {
-            ActionSheet(title: Text("this is the title"))
-        })
+        .actionSheet(isPresented: $showActionSheet, content: getActionSheet
+        )
+    }
+
+    func getActionSheet() -> ActionSheet {
+        return  ActionSheet(title: Text("this is the title"))
     }
 }
 
