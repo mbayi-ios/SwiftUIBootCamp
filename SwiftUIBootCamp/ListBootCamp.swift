@@ -13,9 +13,16 @@ struct ListBootCamp: View {
     ]
     var body: some View {
         List {
-            ForEach(fruits, id: \.self) { fruit in
-                Text(fruit.capitalized)
-            }
+            Section(
+                header: Text("Fruits")){
+                    ForEach(fruits, id: \.self) { fruit in
+                        Text(fruit.capitalized)
+                    }
+                    .onDelete(perform: { indexSet in
+                        fruits.remove(atOffsets: indexSet)
+                    })
+                }
+
         }
     }
 }
