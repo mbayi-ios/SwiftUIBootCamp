@@ -18,9 +18,7 @@ struct ListBootCamp: View {
                     ForEach(fruits, id: \.self) { fruit in
                         Text(fruit.capitalized)
                     }
-                    .onDelete(perform: { indexSet in
-                        delete(indexSet: indexSet)
-                    })
+                    .onDelete(perform: delete)
                 }
 
         }
