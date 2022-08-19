@@ -19,15 +19,20 @@ struct AlertBootCam: View {
             }
             .alert(isPresented: $showAlert) {
                 //Alert(title: Text("there was an error!"))
-                Alert(
-                    title: Text("This is the title"),
-                    message: Text("here we will describe the error"),
-                    primaryButton: .cancel(),
-                    secondaryButton: .destructive(Text("delete"), action: {
-                        backgroundColor = .red
-                    }))
+                getAlert()
+
         }
         }
+    }
+
+    func getAlert() -> Alert {
+        return  Alert(
+            title: Text("This is the title"),
+            message: Text("here we will describe the error"),
+            primaryButton: .cancel(),
+            secondaryButton: .destructive(Text("delete"), action: {
+                backgroundColor = .red
+            }))
     }
 }
 
