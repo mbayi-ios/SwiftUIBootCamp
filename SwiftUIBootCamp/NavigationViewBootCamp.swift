@@ -24,8 +24,20 @@ struct NavigationViewBootCamp: View {
             //.navigationBarTitleDisplayMode(.large)
             //.navigationBarTitleDisplayMode(.automatic)
             //.navigationBarHidden(true)
-            .navigationBarItems(leading: Image(systemName: "person.fill"), trailing: Image(systemName: "gear"))
-
+            .navigationBarItems(
+                leading:
+                    HStack {
+                        Image(systemName: "person.fill")
+                        Image(systemName: "person.fill")
+                    },
+                trailing:
+                    NavigationLink(
+                        destination: MyOtherScreen(),
+                        label: {
+                        Image(systemName: "gear")
+                    })
+                    .accentColor(.red)
+            )
         }
     }
 }
