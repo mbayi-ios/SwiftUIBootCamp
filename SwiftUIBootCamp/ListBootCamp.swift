@@ -11,22 +11,43 @@ struct ListBootCamp: View {
     @State var fruits: [String] = [
         "apple", "orange", "banana", "pech", "mango"
     ]
+
+    @State var veggies: [String] = [
+        "tomatoes", "potatoes"
+    ]
     var body: some View {
         NavigationView {
             List {
                 Section(
-                    header: Text("Fruits")){
+                    header:
+                        HStack {
+                            Text("Fruits")
+                            Image(systemName: "flame.fill")
+                        }
+                        .font(.headline)
+                        .foregroundColor(.orange)
+                ){
                         ForEach(fruits, id: \.self) { fruit in
                             Text(fruit.capitalized)
+                                .font(.callout)
                         }
                         .onDelete(perform: delete)
                         .onMove(perform: move)
                     }
 
+                Section(header: Text("Veggies")) {
+                    ForEach(veggies, id: \.self) { veggie in
+                        Text(veggie.capitalized)
+                    }
+                }
+
             }
+            .accentColor(.green)
+            //.listStyle(GroupedListStyle())
             .navigationTitle("Grovery List")
             .navigationBarItems(leading: EditButton(), trailing: addButton)
         }
+        .accentColor(.red)
     }
 
     var addButton: some View {
