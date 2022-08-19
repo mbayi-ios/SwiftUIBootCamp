@@ -25,7 +25,11 @@ struct ListBootCamp: View {
 
             }
             .navigationTitle("Grovery List")
-            .navigationBarItems(leading: EditButton())
+            .navigationBarItems(
+                leading: EditButton(),
+                trailing: Button("Add", action: {
+                    fruits.append("coconut")
+                }))
         }
     }
 
