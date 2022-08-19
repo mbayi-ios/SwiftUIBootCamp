@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContextMenuBootCamp: View {
+    @State var backgroundColor: Color = .red
     var body: some View {
         VStack (alignment: .leading, spacing: 10.0) {
             Image(systemName: "house.fill")
@@ -19,11 +20,27 @@ struct ContextMenuBootCamp: View {
         }
         .foregroundColor(.white)
         .padding(30)
-        .background(Color.red.cornerRadius(15))
+        .background(backgroundColor.cornerRadius(15))
         .contextMenu(menuItems: {
-            Text("Menu Item 1")
-            Text("Menu Item 1")
-            Text("Menu Item 1")
+            Button {
+                backgroundColor = .yellow
+            } label: {
+                Label("share post ", systemImage: "flame.fill")
+            }
+            Button(action: {
+                backgroundColor = .purple
+            }, label: {
+                Text("Report Post")
+            })
+
+            Button(action: {
+                backgroundColor = .green
+            }, label: {
+                HStack {
+                    Text("Like Post")
+                    Image(systemName: "heart.fill")
+                }
+            })
         })
     }
 }
