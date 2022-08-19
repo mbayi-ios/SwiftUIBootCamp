@@ -9,6 +9,13 @@ import SwiftUI
 
 struct ActionSheetBootCamp: View {
     @State var showActionSheet: Bool = false
+    @State var ActionSheetOptions: ActionsheetOptions = .isOtherPost
+
+    enum ActionsheetOptions {
+        case isMyPost
+        case isOtherPost
+    }
+
     var body: some View {
         VStack {
             HStack {
@@ -17,6 +24,7 @@ struct ActionSheetBootCamp: View {
                 Text("@username")
                 Spacer()
                 Button(action: {
+                    ActionSheetOptions = .isMyPost
                     showActionSheet.toggle()
                 }, label: {
                     Image(systemName: "ellipsis")
@@ -37,14 +45,42 @@ struct ActionSheetBootCamp: View {
     func getActionSheet() -> ActionSheet {
         //return  ActionSheet(title: Text("this is the title"))
 
-        let button1: ActionSheet.Button = .default(Text("DEFAULT"))
-        let button2: ActionSheet.Button = .destructive(Text("DESTRUCTIVE"))
-        let button3: ActionSheet.Button = .cancel()
+//        let button1: ActionSheet.Button = .default(Text("DEFAULT"))
+//        let button2: ActionSheet.Button = .destructive(Text("DESTRUCTIVE"))
+//        let button3: ActionSheet.Button = .cancel()
+//
+//        return ActionSheet(
+//            title: Text("this is the title!"),
+//            message: Text("This is the message"),
+//            buttons: [button1, button1, button1, button2, button3])
 
-        return ActionSheet(
-            title: Text("this is the title!"),
-            message: Text("This is the message"),
-            buttons: [button1, button1, button1, button2, button3])
+        let sharedButton: ActionSheet.Button = .default(Text("Share")) {
+
+        }
+        let reportButton: ActionSheet.Button = .destructive(Text("Report")) {
+
+        }
+
+        let deleteButton: ActionSheet.Button = .destructive(Text("Delete")) {
+
+        }
+
+        let cancelButton: ActionSheet.Button  = .cancel()
+
+        let title = Text("What would you like to do?")
+        switch ActionSheetOptions {
+        case .isMyPost:
+            return ActionSheet(
+                title: title,
+                message: nil,
+                buttons: [sharedButton, reportButton])
+
+        case .isOtherPost:
+            return ActionSheet(
+                title: title,
+                message: nil,
+                buttons: [sharedButton, reportButton, deleteButton, cancelButton])
+        }
     }
 }
 
