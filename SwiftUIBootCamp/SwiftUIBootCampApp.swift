@@ -12,7 +12,8 @@ struct SwiftUIBootCampApp: App {
     var body: some Scene {
         WindowGroup {
             //ContentView()
-            TextFieldBootCamp()
+            //TextFieldBootCamp()
+            TextEditorBootCamp()
         }
     }
 }
