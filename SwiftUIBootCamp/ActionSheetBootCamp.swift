@@ -10,11 +10,28 @@ import SwiftUI
 struct ActionSheetBootCamp: View {
     @State var showActionSheet: Bool = false
     var body: some View {
-        Button("click me") {
-            showActionSheet.toggle()
+        VStack {
+            HStack {
+                Circle()
+                    .frame(width: 30, height: 30)
+                Text("@username")
+                Spacer()
+                Button(action: {
+                    showActionSheet.toggle()
+                }, label: {
+                    Image(systemName: "ellipsis")
+                })
+                    .accentColor(.primary)
+
+            }
+            .padding()
+
+            Rectangle()
+                .aspectRatio(1.0, contentMode: .fit)
+
         }
         .actionSheet(isPresented: $showActionSheet, content: getActionSheet
-        )
+    )
     }
 
     func getActionSheet() -> ActionSheet {
