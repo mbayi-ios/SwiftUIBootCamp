@@ -33,7 +33,10 @@ struct TapGestureBootCamp: View {
                 .frame(maxWidth: .infinity)
                 .background(Color.blue)
                 .cornerRadius(25)
-                .onTapGesture {
+//                .onTapGesture {
+//                    isSelected.toggle()
+//                }
+                .onTapGesture(count: 2) {
                     isSelected.toggle()
                 }
 
