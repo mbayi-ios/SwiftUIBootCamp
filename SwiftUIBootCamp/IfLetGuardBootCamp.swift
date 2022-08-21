@@ -9,7 +9,7 @@ import SwiftUI
 
 struct IfLetGuardBootCamp: View {
     @State var displayText: String? = nil
-    @State var currentUserID: String? = "testUser123"
+    @State var currentUserID: String? = nil
     @State var isLoading: Bool = false
 
     var body: some View {
@@ -30,7 +30,7 @@ struct IfLetGuardBootCamp: View {
             }
             .navigationTitle("Safe Coding")
             .onAppear {
-                loadData()
+                loadData2()
             }
         }
     }
@@ -47,6 +47,19 @@ struct IfLetGuardBootCamp: View {
             displayText = "error: there is no user id"
         }
 
+    }
+
+    func loadData2() {
+        guard let userID = currentUserID else {
+            displayText = "error: there is no user id"
+            return
+        }
+
+        isLoading = true
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3){
+            displayText = "this is the new data! User id is: \(userID)"
+            isLoading = false
+        }
     }
 }
 
