@@ -10,7 +10,7 @@ import SwiftUI
 struct TabViewStyleBootCamp: View {
 
     let icons: [String] = [
-        "heart.fill", "globe", "housr.fill", "person.fill"
+        "heart.fill", "globe", "house.fill", "person.fill"
     ]
     var body: some View {
         TabView {
