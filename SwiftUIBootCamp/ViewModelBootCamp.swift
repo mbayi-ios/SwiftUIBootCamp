@@ -13,15 +13,35 @@ struct FruitModel: Identifiable {
     let count: Int
 }
 
+class FruitViewModel: ObservableObject {
+    @Published var fruitArray: [FruitModel] = []
+
+    func deleteFruit(index: IndexSet) {
+        fruitArray.remove(atOffsets: index)
+    }
+
+    func getFruits(){
+        let fruit1 = FruitModel(name: "Orange", count: 1)
+        let fruit2 = FruitModel(name: "Banana", count: 4)
+        let fruit3 = FruitModel(name: "peach", count: 3)
+
+        fruitArray.append(fruit1)
+        fruitArray.append(fruit2)
+        fruitArray.append(fruit3)
+
+    }
+}
+
 struct ViewModelBootCamp: View {
-    @State var fruits: [FruitModel] = [
-        FruitModel(name: "Apples", count: 5)
-    ]
+//    @State var fruitArray: [FruitModel] = [
+//        FruitModel(name: "Apples", count: 5)
+//    ]
+    @ObservedObject var fruitViewModel: FruitViewModel = FruitViewModel()
 
     var body: some View {
         NavigationView {
             List {
-                ForEach(fruits) { fruit in
+                ForEach(fruitViewModel.fruitArray) { fruit in
                     HStack {
                         Text("\(fruit.count)")
                             .foregroundColor(.red)
@@ -30,29 +50,16 @@ struct ViewModelBootCamp: View {
                             .bold()
                     }
                 }
-                .onDelete(perform: deleteFruit)
+                .onDelete(perform: fruitViewModel.deleteFruit)
             }
             .navigationTitle("Fruit List")
             .onAppear {
-                getFruits()
+                fruitViewModel.getFruits()
             }
         }
     }
 
-    func deleteFruit(index: IndexSet) {
-        fruits.remove(atOffsets: index)
-    }
 
-    func getFruits(){
-        let fruit1 = FruitModel(name: "Orange", count: 1)
-        let fruit2 = FruitModel(name: "Banana", count: 4)
-        let fruit3 = FruitModel(name: "peach", count: 3)
-
-        fruits.append(fruit1)
-        fruits.append(fruit2)
-        fruits.append(fruit3)
-
-    }
 }
 
 struct ViewModelBootCamp_Previews: PreviewProvider {
