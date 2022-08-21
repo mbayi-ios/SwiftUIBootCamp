@@ -13,48 +13,48 @@ import SwiftUI
 
 class EnvironmentViewModel: ObservableObject {
     @Published var dataArray: [String] = []
-    
+
     init() {
         getData()
     }
-    
+
     func getData() {
         self.dataArray.append(contentsOf: ["iphone", "ipad", "imac", "apple watch"])
     }
 }
 
 struct EnvironmentObjectBootCamp: View {
-    
+
     @StateObject var viewModel: EnvironmentViewModel = EnvironmentViewModel()
-    
+
     var body: some View {
         NavigationView {
             List {
                 ForEach(viewModel.dataArray, id: \.self) { item in
                     NavigationLink(
-                        destination: DetailView(selectedItem: item, viewModel: viewModel),
+                        destination: DetailView(selectedItem: item),
                         label: {
                             Text(item)
                         })
-                    
+
                 }
             }
+
             .navigationTitle("iOS devices")
         }
+        .environmentObject(viewModel)
     }
 }
 
 struct DetailView: View {
     let selectedItem: String
-    
-    @ObservedObject var viewModel: EnvironmentViewModel
-    
+
     var body: some View {
         ZStack {
             Color.orange.ignoresSafeArea()
-            
+
             NavigationLink(
-                destination: FinalView(viewModel: viewModel),
+                destination: FinalView(),
                 label: {
                     Text(selectedItem)
                         .font(.headline)
@@ -63,17 +63,17 @@ struct DetailView: View {
                         .padding(.horizontal)
                         .background(Color.white)
                         .cornerRadius(30)
-                    
+
                 })
-            
+
         }
     }
 }
 
 struct FinalView: View {
-    
-    @ObservedObject var viewModel: EnvironmentViewModel
-    
+
+    @EnvironmentObject var viewModel: EnvironmentViewModel
+
     var body: some View {
         ZStack {
             LinearGradient(
@@ -81,7 +81,7 @@ struct FinalView: View {
                 startPoint: .topLeading,
                 endPoint: .bottomTrailing)
                 .ignoresSafeArea()
-            
+
             ScrollView {
                 VStack(spacing: 20) {
                     ForEach(viewModel.dataArray, id: \.self) { item in
