@@ -17,7 +17,7 @@ struct ViewModelBootCamp: View {
     @State var fruits: [FruitModel] = [
         FruitModel(name: "Apples", count: 5)
     ]
-    
+
     var body: some View {
         NavigationView {
             List {
@@ -30,12 +30,17 @@ struct ViewModelBootCamp: View {
                             .bold()
                     }
                 }
+                .onDelete(perform: deleteFruit)
             }
             .navigationTitle("Fruit List")
             .onAppear {
                 getFruits()
             }
         }
+    }
+
+    func deleteFruit(index: IndexSet) {
+        fruits.remove(atOffsets: index)
     }
 
     func getFruits(){
