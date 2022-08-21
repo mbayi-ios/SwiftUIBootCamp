@@ -9,6 +9,9 @@ import SwiftUI
 
 struct IfLetGuardBootCamp: View {
     @State var displayText: String? = nil
+    @State var currentUserID: String? = "testUser123"
+    @State var isLoading: Bool = false
+
     var body: some View {
         NavigationView {
             VStack {
@@ -16,6 +19,10 @@ struct IfLetGuardBootCamp: View {
                 if let text = displayText {
                     Text(text)
                         .font(.title)
+                }
+
+                if isLoading {
+                    ProgressView()
                 }
 
 
@@ -29,9 +36,17 @@ struct IfLetGuardBootCamp: View {
     }
 
     func loadData() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3){
-            displayText = "this is the new data"
+
+        if let userID = currentUserID {
+            isLoading = true
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3){
+                displayText = "this is the new data! User id is: \(userID)"
+                isLoading = false
+            }
+        } else {
+            displayText = "error: there is no user id"
         }
+
     }
 }
 
