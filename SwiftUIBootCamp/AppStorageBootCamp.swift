@@ -20,8 +20,13 @@ struct AppStorageBootCamp: View {
             }
 
             Button("save".uppercased()){
-                currentUserName = "Amby"
+                let name: String = "amby"
+                currentUserName = name
+                UserDefaults.standard.set(name, forKey: "name")
             }
+        }
+        .onAppear{
+            currentUserName = UserDefaults.standard.string(forKey: "name")
         }
     }
 }
