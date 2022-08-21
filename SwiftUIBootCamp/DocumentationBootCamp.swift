@@ -67,7 +67,7 @@ struct DocumentationBootCamp: View {
     ///  getAlert(text: "hi") -> Alert(title: Text("Hi"))
     /// ```
     ///
-    /// - Warning: There is no additional message in this alert
+    /// - Warn ing: There is no additional message in this alert
     /// - Parameter text: This is the title for the alert
     /// - Returns: Returns an alert with title
     func getAlert(text: String) -> Alert {
