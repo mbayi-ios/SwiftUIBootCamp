@@ -21,7 +21,7 @@ struct AppStorageBootCamp: View {
             }
 
             Button("save".uppercased()){
-                let name: String = "Emily"
+                let name: String = "Emily "
                 currentUserName = name
 //                UserDefaults.standard.set(name, forKey: "name")
             }
