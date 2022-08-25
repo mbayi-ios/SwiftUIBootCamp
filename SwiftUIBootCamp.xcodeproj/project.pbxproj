@@ -20,6 +20,7 @@
 		892235CF28B0281E00D637A0 /* TabViewStyleBootCamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892235CE28B0281E00D637A0 /* TabViewStyleBootCamp.swift */; };
 		89235ACF28B77936004F67EC /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89235ACE28B77936004F67EC /* ProfileView.swift */; };
 		89235AD128B77F59004F67EC /* AsyncImageBootCamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89235AD028B77F59004F67EC /* AsyncImageBootCamp.swift */; };
+		89235AD328B784B1004F67EC /* BackgroundMaterialsBootCamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89235AD228B784B1004F67EC /* BackgroundMaterialsBootCamp.swift */; };
 		8951830B28AB803C00E57744 /* SwiftUIBootCampApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8951830A28AB803C00E57744 /* SwiftUIBootCampApp.swift */; };
 		8951830D28AB803C00E57744 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8951830C28AB803C00E57744 /* ContentView.swift */; };
 		8951830F28AB803F00E57744 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8951830E28AB803F00E57744 /* Assets.xcassets */; };
@@ -83,6 +84,7 @@
 		892235CE28B0281E00D637A0 /* TabViewStyleBootCamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewStyleBootCamp.swift; sourceTree = "<group>"; };
 		89235ACE28B77936004F67EC /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		89235AD028B77F59004F67EC /* AsyncImageBootCamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageBootCamp.swift; sourceTree = "<group>"; };
+		89235AD228B784B1004F67EC /* BackgroundMaterialsBootCamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundMaterialsBootCamp.swift; sourceTree = "<group>"; };
 		8951830728AB803C00E57744 /* SwiftUIBootCamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIBootCamp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8951830A28AB803C00E57744 /* SwiftUIBootCampApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIBootCampApp.swift; sourceTree = "<group>"; };
 		8951830C28AB803C00E57744 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 				89C9DC0028AB9E3400CED28D /* ImageBootCamp.swift */,
 				890F520928ABCC66004056D5 /* PaddingAndSpacerBootCamp.swift */,
 				89A9D77F28AFDF4D00586681 /* PickerBootCamp.swift */,
+				89235AD228B784B1004F67EC /* BackgroundMaterialsBootCamp.swift */,
 				89A9D77728AFCCD200586681 /* ContextMenuBootCamp.swift */,
 				89AE792228B1F9F300FF4FAB /* ModelBootCamp.swift */,
 				89AE792428B2025C00FF4FAB /* ViewModelBootCamp.swift */,
@@ -347,6 +350,7 @@
 				89235AD128B77F59004F67EC /* AsyncImageBootCamp.swift in Sources */,
 				89AE792328B1F9F300FF4FAB /* ModelBootCamp.swift in Sources */,
 				892235CB28B01B8F00D637A0 /* sliderBootCamp.swift in Sources */,
+				89235AD328B784B1004F67EC /* BackgroundMaterialsBootCamp.swift in Sources */,
 				892235C728AFFE0F00D637A0 /* DatePickerBootCamp.swift in Sources */,
 				89AE791F28B1EFA800FF4FAB /* IfLetGuardBootCamp.swift in Sources */,
 				89AE792528B2025C00FF4FAB /* ViewModelBootCamp.swift in Sources */,
