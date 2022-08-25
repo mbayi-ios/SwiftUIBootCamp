@@ -18,6 +18,7 @@
 		892235CB28B01B8F00D637A0 /* sliderBootCamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892235CA28B01B8F00D637A0 /* sliderBootCamp.swift */; };
 		892235CD28B0239A00D637A0 /* TabViewBootCamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892235CC28B0239A00D637A0 /* TabViewBootCamp.swift */; };
 		892235CF28B0281E00D637A0 /* TabViewStyleBootCamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892235CE28B0281E00D637A0 /* TabViewStyleBootCamp.swift */; };
+		89235ACF28B77936004F67EC /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89235ACE28B77936004F67EC /* ProfileView.swift */; };
 		8951830B28AB803C00E57744 /* SwiftUIBootCampApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8951830A28AB803C00E57744 /* SwiftUIBootCampApp.swift */; };
 		8951830D28AB803C00E57744 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8951830C28AB803C00E57744 /* ContentView.swift */; };
 		8951830F28AB803F00E57744 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8951830E28AB803F00E57744 /* Assets.xcassets */; };
@@ -79,6 +80,7 @@
 		892235CA28B01B8F00D637A0 /* sliderBootCamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sliderBootCamp.swift; sourceTree = "<group>"; };
 		892235CC28B0239A00D637A0 /* TabViewBootCamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewBootCamp.swift; sourceTree = "<group>"; };
 		892235CE28B0281E00D637A0 /* TabViewStyleBootCamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewStyleBootCamp.swift; sourceTree = "<group>"; };
+		89235ACE28B77936004F67EC /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		8951830728AB803C00E57744 /* SwiftUIBootCamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIBootCamp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8951830A28AB803C00E57744 /* SwiftUIBootCampApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIBootCampApp.swift; sourceTree = "<group>"; };
 		8951830C28AB803C00E57744 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 			children = (
 				891EA8BF28B4BF75003F44A9 /* IntroView.swift */,
 				891EA8C128B4C086003F44A9 /* OnboardingView.swift */,
+				89235ACE28B77936004F67EC /* ProfileView.swift */,
 			);
 			path = OnboardingViews;
 			sourceTree = "<group>";
@@ -323,6 +326,7 @@
 				891EA8C228B4C086003F44A9 /* OnboardingView.swift in Sources */,
 				896F8C5428AD89980045C3C3 /* BindingBootCamp.swift in Sources */,
 				89C9DC0528ABA56800CED28D /* BackgroundAndOverlayBootCamp.swift in Sources */,
+				89235ACF28B77936004F67EC /* ProfileView.swift in Sources */,
 				89AE791928B1D6E300FF4FAB /* DarkModeBootCamp.swift in Sources */,
 				89AE792928B2285100FF4FAB /* AppStorageBootCamp.swift in Sources */,
 				896F8C5228AD83E30045C3C3 /* ExtractSubViewsBootCamp.swift in Sources */,

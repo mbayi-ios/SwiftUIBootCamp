@@ -15,7 +15,8 @@ struct SwiftUIBootCampApp: App {
             //TextFieldBootCamp()
             //TextEditorBootCamp()
             //PickerBootCamp()
-            AppStorageBootCamp()
+            //AppStorageBootCamp()
+            IntroView()
         }
     }
 }
