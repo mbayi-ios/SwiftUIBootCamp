@@ -73,15 +73,16 @@ struct OnboardingView_Previews: PreviewProvider {
 extension OnboardingView {
 
     private var bottomButton: some View {
-        Text("sign in")
+        Text(onboardingState == 0 ? "SIGN UP" : onboardingState == 3 ? "FINISH" : "NEXT")
             .font(.headline)
             .foregroundColor(.purple)
             .frame(height: 55)
             .frame(maxWidth: .infinity)
             .background(Color.white)
             .cornerRadius(10)
+            .animation(nil)
             .onTapGesture {
-
+                handleNextButtonPressed()
             }
     }
 
@@ -182,5 +183,18 @@ extension OnboardingView {
             Spacer()
         }
         .padding(30)
+    }
+}
+
+// MARK: FUNCTIONS
+extension OnboardingView {
+    func handleNextButtonPressed() {
+        if onboardingState == 3 {
+            //sign in
+        } else  {
+            withAnimation(.spring()) {
+                onboardingState += 1
+            }
+        }
     }
 }
