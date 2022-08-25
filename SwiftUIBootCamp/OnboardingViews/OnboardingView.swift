@@ -19,6 +19,10 @@ struct OnboardingView: View {
 
     @State var onboardingState: Int = 0
 
+    @State var name: String = ""
+    @State var age: Double = 50
+    @State var gender: String = ""
+
     var body: some View {
         ZStack {
             // content
@@ -28,8 +32,13 @@ struct OnboardingView: View {
                     welcomeSection
 
                 case 1:
-                    RoundedRectangle(cornerRadius: 25)
-                        .foregroundColor(.red)
+                    addNameSection
+
+                case 2:
+                    addAgeSection
+
+                case 3:
+                    addGenderSection
 
                 default:
                     RoundedRectangle(cornerRadius: 25)
@@ -102,6 +111,76 @@ extension OnboardingView {
             Spacer()
         }
         .multilineTextAlignment(.center)
+        .padding(30)
+    }
+
+    private var addNameSection: some View {
+        VStack(spacing: 40) {
+            Spacer()
+            Text("What's your name?")
+                .font(.largeTitle)
+                .fontWeight(.semibold)
+                .foregroundColor(.white)
+            TextField("Your name Here...", text: $name)
+                .font(.headline)
+                .frame(height: 55)
+                .padding(.horizontal)
+                .background(Color.white)
+                .cornerRadius(10)
+            Spacer()
+            Spacer()
+        }
+        .padding(30)
+    }
+
+    private var addAgeSection: some View {
+        VStack(spacing: 40) {
+            Spacer()
+            Text("What's your age?")
+                .font(.largeTitle)
+                .fontWeight(.semibold)
+                .foregroundColor(.white)
+
+            Text("\(String(format: "%.0f", age))")
+                .font(.largeTitle)
+                .fontWeight(.semibold)
+                .foregroundColor(.white)
+            Slider(value: $age, in: 18...100, step: 1)
+                .accentColor(.white)
+            Spacer()
+            Spacer()
+        }
+        .padding(30)
+    }
+
+    private var addGenderSection: some View {
+        VStack(spacing: 40) {
+            Spacer()
+            Text("What's your gender?")
+                .font(.largeTitle)
+                .fontWeight(.semibold)
+                .foregroundColor(.white)
+
+            Picker(selection: $gender,
+                   label:
+                    Text(gender.count > 1 ? gender: "select a gender")
+                    .font(.headline)
+                    .foregroundColor(.purple)
+                    .frame(height: 55)
+                    .frame(maxWidth: .infinity)
+                    .background(Color.white)
+                    .cornerRadius(10)
+                   ,
+                   content: {
+                Text("Male").tag("Male")
+                Text("Female").tag("Female")
+                Text("Non-Binary").tag("Non-Binary")
+            })
+                .pickerStyle(MenuPickerStyle())
+            
+            Spacer()
+            Spacer()
+        }
         .padding(30)
     }
 }
